@@ -1,0 +1,107 @@
+%    printable Heart Sutra for Tracing
+
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper, margin=0.9in]{geometry}
+\usepackage{xeCJK}
+\usepackage[svgnames]{xcolor}
+\usepackage{nopageno}
+%\usepackage{fontspec}
+\usepackage{anyfontsize}
+\usepackage{hyperref}
+%\usepackage{array}
+%\usepackage{longtable}
+\usepackage{multicol}
+
+
+
+\hypersetup {
+ pdfauthor= Rose DiFonzo,
+ pdftitle={Four Bodhisattva Vows for Tracing},
+ pdfsubject={Buddhism, kanji, 四弘誓願  },
+ pdfkeywords={kanji, japan, wanikani, Bodhisattva, Buddhism, Buddha, 四弘誓願 },
+ }
+ 
+
+ \setCJKmainfont{KanjiStrokeOrders}
+ \setCJKsansfont{Meiryo}
+  
+  \newcommand{\stick}{\scalebox{-1}[1]{\rotatebox[origin=tr]{90}{ー}\hspace{0.75em}}}
+  
+ \newcommand{\heartblock}[4]
+{
+\CJKfamily{Script=CJK}
+\fontsize{12}{12}
+\textcolor{black}{#1 #3\\}
+\fontsize{70}{70}
+\textcolor{LightGray}{#2\\}
+%\stepcounter{mycounter}
+\fontsize{08}{08}
+%%\noindent
+\textcolor{black}{#4}
+
+}
+
+\begin{document}
+四弘誓願 The Four Bodhisattva Vows
+\begin{multicols}{4}
+\RLmulticolcolumns
+\heartblock{}{衆}{}{}
+\heartblock{}{生}{}{}
+\heartblock{}{無}{}{}
+\heartblock{}{邊}{}{}
+\heartblock{}{誓}{}{}
+\heartblock{}{願}{}{}
+\heartblock{}{度}{}{}
+\heartblock{\\}{}{}{}
+
+\heartblock{}{煩}{}{}
+\heartblock{}{悩}{}{}
+\heartblock{}{無}{}{}
+\heartblock{}{儘}{}{}
+\heartblock{}{誓}{}{}
+\heartblock{}{願}{}{}
+\heartblock{}{斷}{}{}
+\heartblock{\\}{}{}{}
+
+\heartblock{}{法}{}{}
+\heartblock{}{門}{}{}
+\heartblock{}{無}{}{}
+\heartblock{}{量}{}{}
+\heartblock{}{誓}{}{}
+\heartblock{}{願}{}{}
+\heartblock{}{學}{}{}
+\heartblock{\\}{}{}{}
+
+
+
+\heartblock{}{佛}{}{}
+\heartblock{}{道}{}{}
+\heartblock{}{無}{}{}
+\heartblock{}{上}{}{}
+\heartblock{}{誓}{}{}
+\heartblock{}{願}{}{}
+\heartblock{}{成}{}{}
+\heartblock{\\}{}{}{}
+
+
+
+\end{multicols}
+
+\vfill\eject\pagebreak
+
+Read from right to left top to bottom:
+
+\begin{quotation}
+
+shu jou mu hen sei gan do \\
+
+pon nou mu jin sei gan dan \\
+
+hou mon mu ryou sei gan gaku \\
+
+butsu do mu sei gan jou
+
+\end{quotation}
+
+
+\end{document} 
