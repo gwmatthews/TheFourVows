@@ -1,7 +1,7 @@
 %    sutras for tracing, reading, chanting
 
 \documentclass[letterpaper]{article}
-\usepackage[left=2cm, right=2cm, top=1cm, bottom=1cm]{geometry}
+\usepackage[left=2cm, right=2cm, top=0.3cm, bottom=0.3cm]{geometry}
 
 \usepackage{nopageno}
 \usepackage{multicol}
@@ -36,6 +36,51 @@
 %%%%%%%
 
 \begin{document}
+	\vspace*{3cm}
+	
+	\centering {\Huge 聖経 
+		
+		\vspace*{0.5cm}
+		
+		sutra styles
+	}
+	
+	\vspace*{2cm}
+	    \large
+	    \begin{verbatim}
+		\input{sutras.tex}
+		\end{verbatim}}
+	
+	\vspace*{1cm}
+	
+	
+	\begin{verbatim}
+	%%% CHOICE OF FONTS
+	
+	%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
+	%\setCJKmainfont{ipam.ttf}  %% serif
+	%\setCJKmainfont{ipaexm.ttf}  %% serif
+	%\setCJKmainfont{ipag.ttf}  %% sans
+	%\setCJKmainfont{ipamp.ttf}  %% sans
+	\setCJKmainfont{ipaexg.ttf}  %% sans
+	
+	\setCJKsansfont{Meiryo}
+	
+	%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
+	\input{sutras.tex}
+	
+	%%% USAGE
+	
+	\heartblock{しゅう shu}{衆}{many \\ lines}  %% parameters may be blank, fixed height
+	
+	\heartflow{願}  %% variable height
+	
+	\heartspaced{無}  %% variable height with extra padding
+	
+	\end{verbatim}
+	
+	
+	\vfill\eject\pagebreak
 	
 \centering 四弘誓願 The Four Bodhisattva Vows
 
@@ -77,9 +122,14 @@
 
 \end{multicols}
 
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{45}{45}}
+\heartblock{}{}{}
+\end{verbatim}
+
 \pagebreak
 
-\renewcommand{\kanji}{\centering\fontsize{65}{65}}
+\renewcommand{\kanji}{\centering\fontsize{60}{60}}
 
 \vspace*{0.5cm}
 \begin{multicols}{4}
@@ -123,6 +173,11 @@
 	\heartblock{}{成}{}
 	
 \end{multicols}
+
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{60}{60}}
+\heartblock{}{無}{}
+\end{verbatim}
 
 \vfill\eject\pagebreak
 
@@ -172,6 +227,11 @@
 	\heartflow{成}
 
 \end{multicols}
+
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{55}{55}}
+\heartflow{}
+\end{verbatim}
 
 \vfill\eject\pagebreak
 
@@ -288,7 +348,12 @@
 	\coda
 \end{multicols}	
 
-
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{35}{35}}
+\heartflow{}
+\coda %% dot after verse
+\end{verbatim}
+	
 	\vfill\eject\pagebreak
 	
 	%%%%% SMALL FLOWING TEXT
@@ -336,5 +401,10 @@
 		\heartspaced{成}
 		
 \end{multicols}
+
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{45}{45}}
+\heartspaced{}
+\end{verbatim}
 
 \end{document} 
