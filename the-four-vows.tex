@@ -1,0 +1,133 @@
+%    printable Heart Sutra for Tracing
+
+\documentclass[letterpaper]{article}
+\usepackage[left=2cm, right=2cm, top=0.3cm, bottom=0.3cm]{geometry}
+\usepackage{nopageno}
+\usepackage{multicol}
+\usepackage{xeCJK}
+\usepackage{anyfontsize}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+
+\hypersetup {
+	pdfauthor= Rose DiFonzo (remix: George Matthews),
+	pdftitle={Four Bodhisattva Vows for Tracing},
+	pdfsubject={Buddhism, kanji, 四弘誓願  },
+	pdfkeywords={kanji, japan, wanikani, Bodhisattva, Buddhism, Buddha, 四弘誓願 },
+}
+
+\setCJKmainfont{KanjiStrokeOrders}
+\setCJKsansfont{Meiryo}
+
+\newcommand{\kanji}{\centering\fontsize{70}{70}}
+\newcommand{\means}{\tcblower\centering}
+
+% new tcolorbox environment
+% #1: tcolorbox options
+% #2: box title
+\newtcolorbox{kanjibox}[2][]
+{
+	colframe = black!0,
+	height=3.55cm,    %%%% fixed height boxes!
+	size=small,
+	colback  = white,
+	colupper= black!30,
+	coltitle = black,
+	halign title= center,
+	fontlower= \scriptsize,
+	fonttitle= \small, 
+	title    = {#2},
+	#1,
+}
+
+\newcommand{\heartblock}[3]
+{
+	\begin{kanjibox}{#1}
+		\kanji #2
+		\means #3
+	\end{kanjibox}
+	
+}
+
+\begin{document}
+	
+\centering 四弘誓願 The Four Bodhisattva Vows
+
+\begin{multicols}{4}
+\RLmulticolcolumns
+
+\heartblock{しゅう shu}{衆}{many}
+\heartblock{じょう jou}{生}{life \\ 衆生 all living things}
+\heartblock{む mu}{無}{nothing}
+\heartblock{へん hen}{邊}{boundary \\ 邊 is now 辺,  無辺 limitless}
+\heartblock{せい sei}{誓}{vow}
+\heartblock{がん gan}{願}{vow  \\ 誓願 vow}
+\heartblock{ど do}{度}{degrees \\ paramita, save}
+
+\heartblock{ぽん hon}{煩}{anxiety}
+\heartblock{のう nou}{悩}{trouble \\ 煩悩 three poisons }
+\heartblock{む mu}{無}{no}
+\heartblock{じん jin}{儘}{exhaust \\ simplifies to 盡,  侭,  尽}
+\heartblock{せい sei}{誓}{}
+\heartblock{がん gan}{願}{}
+\heartblock{だん dan}{斷}{quit \\ simplifies to 断}
+
+\heartblock{ほう hou}{法}{dharma}
+\heartblock{もん mon}{門}{gate}
+\heartblock{む mu}{無}{no}
+\heartblock{りょう ryo}{量}{quantity \\ 無量 immeasurable}
+\heartblock{せい sei}{誓}{}
+\heartblock{がん gan}{願}{}
+\heartblock{がく gaku}{學}{learn \\ simplifies to 学}
+
+\heartblock{ぶつ butsu}{佛}{Buddha}
+\heartblock{どう dou}{道}{path}
+\heartblock{む mu}{無}{no}
+\heartblock{じょう jou}{上}{above \\ 無上　best}
+\heartblock{せい sei}{誓}{}
+\heartblock{がん gan}{願}{}
+\heartblock{じょう jou}{成}{become}
+
+\end{multicols}
+\pagebreak
+
+\renewcommand{\kanji}{\centering\fontsize{80}{80}}
+\vspace*{0.5cm}
+\begin{multicols}{4}
+	\RLmulticolcolumns
+	
+	\heartblock{}{衆}{}
+	\heartblock{}{生}{}
+	\heartblock{}{無}{}
+	\heartblock{}{邊}{}
+	\heartblock{}{誓}{}
+	\heartblock{}{願}{}
+	\heartblock{}{度}{}
+	
+	\heartblock{}{煩}{}
+	\heartblock{}{悩}{}
+	\heartblock{}{無}{}
+	\heartblock{}{儘}{}
+	\heartblock{}{誓}{}
+	\heartblock{}{願}{}
+	\heartblock{}{斷}{}
+	
+	\heartblock{}{法}{}
+	\heartblock{}{門}{}
+	\heartblock{}{無}{}
+	\heartblock{}{量}{}
+	\heartblock{}{誓}{}
+	\heartblock{}{願}{}
+	\heartblock{}{學}{}
+	
+	\heartblock{}{佛}{}
+	\heartblock{}{道}{}
+	\heartblock{}{無}{}
+	\heartblock{}{上}{}
+	\heartblock{}{誓}{}
+	\heartblock{}{願}{}
+	\heartblock{}{成}{}
+	
+\end{multicols}
+
+\end{document} 

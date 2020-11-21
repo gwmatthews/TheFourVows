@@ -1,0 +1,9 @@
+Hi,
+
+I really love these tracing sheets, and I especially wanted to share them with the people in a zen calligraphy class I've been doing. An I find sutra tracing a nice combination of spiritual and artistic practice. But it really bugs me that they aren't lined up :smile:! Maybe its just me (My favorite job at the zen monastrey I lived at a few years ago, because at the end of the night I was supposed to line up all of the cushions and mats in the zendo just so), but i thought I'd see if I could figure out a way do that. At first I redid everything and the result was a mess --- tons of code and you had to enter the text the opposite way and backwards too. SO I gave a go at adding evenness to your code.
+
+The code's below, but here is some comments:
+
+First a new command:
+
+'
