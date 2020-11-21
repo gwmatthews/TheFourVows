@@ -1,8 +1,7 @@
-%    printable Heart Sutra for Tracing
+%    sutras for tracing, reading, chanting
 
 \documentclass[letterpaper]{article}
-\usepackage[left=2cm, right=2cm, top=0.3cm, bottom=0.3cm]{geometry}
-
+\usepackage[left=2cm, right=2cm, top=1cm, bottom=1cm]{geometry}
 
 \usepackage{nopageno}
 \usepackage{multicol}
@@ -20,75 +19,21 @@
 
 %%% CHOICE OF FONTS
 
-
-%\setCJKmainfont{KanjiStrokeOrders}
-%\setCJKmainfont{ipag.ttf}  %% sans
-%\setCJKmainfont{ipam.ttf}  %% serif
+%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
+\setCJKmainfont{ipam.ttf}  %% serif
 %\setCJKmainfont{ipaexm.ttf}  %% serif
-\setCJKmainfont{ipamp.ttf}
+%\setCJKmainfont{ipag.ttf}  %% sans
+%\setCJKmainfont{ipamp.ttf}  %% sans
+%\setCJKmainfont{ipaexg.ttf}  %% sans
+
+\setCJKsansfont{Meiryo}   %%% residual not sure if needed
 
 
-\setCJKsansfont{Meiryo}
+\input{sutras.tex}
 
-\newcommand{\kanji}{\centering\fontsize{70}{70}}
-\newcommand{\means}{\tcblower\centering}
-
-% new tcolorbox environment
-% #1: tcolorbox options
-% #2: box title
-\newtcolorbox{kanjibox}[2][]
-{
-	colframe = black!0,
-	height=3.55cm,    %%%% fixed height boxes!
-	size=small,
-	colback  = white,
-	colupper= black!30,
-	coltitle = black,
-	halign title= center,
-	fontlower= \scriptsize,
-	fonttitle= \small, 
-	title    = {#2},
-	#1,
-}
-
-\newtcolorbox{kanjiflow}[2][]
-{
-	colframe = black!0,
-	size=small,
-	colback  = white,
-	colupper= black!75,
-	coltitle = black,
-	halign title= center,
-	fontlower= \scriptsize,
-	fonttitle= \small, 
-	title    = {#2},
-	#1,
-}
-
-\newcommand{\heartblock}[3]
-{
-	
-	
-	\begin{kanjibox}{#1}
-		\kanji #2
-		\means #3
-	\end{kanjibox}
-	
-}
-
-\newcommand{\heartflow}[3]
-{
-	
-	\begin{kanjiflow}{#1}
-		\kanji #2
-		\means #3
-	\end{kanjiflow}
-	
-}
-
-
-
-
+%%%%%%%
+%%%%%% END PREABMBLE
+%%%%%%%
 
 \begin{document}
 	
@@ -130,60 +75,221 @@
 \heartblock{じょう jou}{成}{become}
 
 \end{multicols}
-\pagebreak
-
-
-	
-
-
-\renewcommand{\kanji}{\centering\fontsize{70}{70}}
 
 
 
-\vspace*{0.5cm}
+\vfill\eject\pagebreak
+
+%%%%% MEDIUM FLOWING TEXT
+
+\vspace*{1cm}
+
+\renewcommand{\kanji}{\centering\fontsize{55}{55}}
+\vspace*{2cm}
+
+
 \begin{multicols}{4}
 	\RLmulticolcolumns
 	
-	\heartflow{}{衆}{}
-	\heartflow{}{生}{}
-	\heartflow{}{無}{}
-	\heartflow{}{邊}{}
-	\heartflow{}{誓}{}
-	\heartflow{}{願}{}
-	\heartflow{}{度}{}
-	
+	\heartflow{衆}
+	\heartflow{生}
+	\heartflow{無}
+	\heartflow{邊}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{度}
+	\columnbreak
+		
+	\heartflow{煩}
+	\heartflow{悩}
+	\heartflow{無}
+	\heartflow{儘}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{斷}
+	\columnbreak
+
+	\heartflow{法}
+	\heartflow{門}
+	\heartflow{無}
+	\heartflow{量}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{學}
 	\columnbreak
 	
-	\heartflow{}{煩}{}
-	\heartflow{}{悩}{}
-	\heartflow{}{無}{}
-	\heartflow{}{儘}{}
-	\heartflow{}{誓}{}
-	\heartflow{}{願}{}
-	\heartflow{}{斷}{}
+	\heartflow{佛}
+	\heartflow{道}
+	\heartflow{無}
+	\heartflow{上}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{成}
+
+\end{multicols}
+
+\vfill\eject\pagebreak
+
+%%%%% SMALL FLOWING TEXT
+\vspace*{2cm}
+\renewcommand{\kanji}{\centering\fontsize{40}{40}}
+
+\textcolor{gray}{\kanji{四弘誓願}}
+\vspace*{2cm}
+
+\begin{multicols}{7}
 	
-	\columnbreak
+	\renewcommand{\kanji}{\centering\fontsize{35}{35}}
+	\RLmulticolcolumns
+	%%% 1
+	\heartflow{衆}
+	\heartflow{生}
+	\heartflow{無}
+	\heartflow{邊}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{度}
+	%%% 2
+	\heartflow{煩}
+	\heartflow{悩}
+	\heartflow{無}
+	\heartflow{儘}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{斷}
+	%%% 3
+	\heartflow{法}
+	\heartflow{門}
+	\heartflow{無}
+	\heartflow{量}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{學}
+	%%%4
+	\heartflow{佛}
+	\heartflow{道}
+	\heartflow{無}
+	\heartflow{上}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{成}
+    \coda
+	%%%
+	%%% 1
+	\heartflow{衆}
+	\heartflow{生}
+	\heartflow{無}
+	\heartflow{邊}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{度}
+	%%% 2
+	\heartflow{煩}
+	\heartflow{悩}
+	\heartflow{無}
+	\heartflow{儘}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{斷}
+	%%% 3
+	\heartflow{法}
+	\heartflow{門}
+	\heartflow{無}
+	\heartflow{量}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{學}
+	%%%4
+	\heartflow{佛}
+	\heartflow{道}
+	\heartflow{無}
+	\heartflow{上}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{成}
+	\coda
+	%%%
+	%%% 1
+	\heartflow{衆}
+	\heartflow{生}
+	\heartflow{無}
+	\heartflow{邊}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{度}
+	%%% 2
+	\heartflow{煩}
+	\heartflow{悩}
+	\heartflow{無}
+	\heartflow{儘}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{斷}
+	%%% 3
+	\heartflow{法}
+	\heartflow{門}
+	\heartflow{無}
+	\heartflow{量}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{學}
+	%%%4
+	\heartflow{佛}
+	\heartflow{道}
+	\heartflow{無}
+	\heartflow{上}
+	\heartflow{誓}
+	\heartflow{願}
+	\heartflow{成}
+	\coda
+\end{multicols}	
 	
-	\heartflow{}{法}{}
-	\heartflow{}{門}{}
-	\heartflow{}{無}{}
-	\heartflow{}{量}{}
-	\heartflow{}{誓}{}
-	\heartflow{}{願}{}
-	\heartflow{}{學}{}
+	\vfill\eject\pagebreak
 	
-	\columnbreak
+	%%%%% SMALL FLOWING TEXT
+	\vspace*{2cm}
+	\renewcommand{\kanji}{\centering\fontsize{40}{40}}
 	
-	\heartflow{}{佛}{}
-	\heartflow{}{道}{}
-	\heartflow{}{無}{}
-	\heartflow{}{上}{}
-	\heartflow{}{誓}{}
-	\heartflow{}{願}{}
-	\heartflow{}{成}{}
+	\textcolor{gray}{\kanji{四弘誓願}}
+	\vspace*{2cm}
 	
-	
-	
+	\begin{multicols}{4}
+		
+		\renewcommand{\kanji}{\centering\fontsize{35}{35}}
+		\RLmulticolcolumns
+		%%% 1
+		\heartspaced{衆}
+		\heartspaced{生}
+		\heartspaced{無}
+		\heartspaced{邊}
+		\heartspaced{誓}
+		\heartspaced{願}
+		\heartspaced{度}
+		%%% 2
+		\heartspaced{煩}
+		\heartspaced{悩}
+		\heartspaced{無}
+		\heartspaced{儘}
+		\heartspaced{誓}
+		\heartspaced{願}
+		\heartspaced{斷}
+		%%% 3
+		\heartspaced{法}
+		\heartspaced{門}
+		\heartspaced{無}
+		\heartspaced{量}
+		\heartspaced{誓}
+		\heartspaced{願}
+		\heartspaced{學}
+		%%%4
+		\heartspaced{佛}
+		\heartspaced{道}
+		\heartspaced{無}
+		\heartspaced{上}
+		\heartspaced{誓}
+		\heartspaced{願}
+		\heartspaced{成}
+		
 	
 	
 \end{multicols}

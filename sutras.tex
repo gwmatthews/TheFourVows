@@ -1,0 +1,79 @@
+
+
+%%% NEW COMMANDS
+\newcommand{\kanji}{\centering\fontsize{60}{60}}   %%% set main font size 
+\newcommand{\means}{\tcblower\centering}           %%% position lower text
+
+%%% For ending verses
+\newcommand{\coda}{	\vspace*{1ex}\heartflow{。}\vspace*{1ex}}
+
+
+%%%%%%%%%%%%%%
+% FIXED HEIGHT BOX FOR INCLUDING READINGS AND/OR MEANINGS
+% #1: tcolorbox options
+% #2: box title
+
+\newtcolorbox{kanjibox}[2][]
+{
+	colframe = black!0,
+	height=3.3cm,    %%%% fixed height boxes!
+	size=small,
+	colback  = white,
+	colupper= black!30,
+	coltitle = black,
+	halign title= center,
+	fontlower= \scriptsize,
+	fonttitle= \small, 
+	title    = {#2},
+	#1,
+}
+
+%%% display reading, kanji and meaning
+\newcommand{\heartblock}[3]
+{
+	\begin{kanjibox}{#1}
+		\kanji #2
+		\means #3
+	\end{kanjibox}
+}
+%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%
+% VARIABLE HEIGHT BLOCK FOR JUST KANJI
+% #1: tcolorbox options
+
+\newtcolorbox{kanjiflow}[1][]
+{
+	colframe = black!0,
+	size=minimal,
+	colback  = white,
+	colupper= black!75,
+	coltitle = black,
+	halign title= center,
+	fontlower= \tiny,
+	fonttitle= \tiny,
+	#1,
+}
+
+%%% display kanji
+
+\newcommand{\heartflow}[1]
+{
+	\begin{kanjiflow}[size=tight]{}
+		\kanji #1
+	\end{kanjiflow}
+}
+
+
+%%% display kanji with more padding
+
+\newcommand{\heartspaced}[1]
+{
+	\begin{kanjiflow}[size=normal, boxsep=1ex]{}
+		\kanji #1
+	\end{kanjiflow}
+}
+
+\endinput

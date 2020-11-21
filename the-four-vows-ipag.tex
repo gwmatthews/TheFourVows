@@ -1,8 +1,7 @@
-%    printable Heart Sutra for Tracing
+%    sutras for tracing, reading, chanting
 
 \documentclass[letterpaper]{article}
-\usepackage[left=2cm, right=2cm, top=0.3cm, bottom=0.3cm]{geometry}
-
+\usepackage[left=2cm, right=2cm, top=1cm, bottom=1cm]{geometry}
 
 \usepackage{nopageno}
 \usepackage{multicol}
@@ -18,68 +17,23 @@
 	pdfkeywords={kanji, japan, wanikani, Bodhisattva, Buddhism, Buddha, 四弘誓願 },
 }
 
-\setCJKmainfont{ipag.ttf}
-\setCJKsansfont{Meiryo}
+%%% CHOICE OF FONTS
 
-\newcommand{\kanji}{\centering\fontsize{70}{70}}
-\newcommand{\means}{\tcblower\centering}
+%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
+%\setCJKmainfont{ipam.ttf}  %% serif
+%\setCJKmainfont{ipaexm.ttf}  %% serif
+%\setCJKmainfont{ipag.ttf}  %% sans
+%\setCJKmainfont{ipamp.ttf}  %% sans
+\setCJKmainfont{ipaexg.ttf}  %% sans
 
-% new tcolorbox environment
-% #1: tcolorbox options
-% #2: box title
-\newtcolorbox{kanjibox}[2][]
-{
-	colframe = black!0,
-	height=3.55cm,    %%%% fixed height boxes!
-	size=small,
-	colback  = white,
-	colupper= black!30,
-	coltitle = black,
-	halign title= center,
-	fontlower= \scriptsize,
-	fonttitle= \small, 
-	title    = {#2},
-	#1,
-}
+\setCJKsansfont{Meiryo}   %%% residual not sure if needed
 
-\newtcolorbox{kanjiflow}[2][]
-{
-	colframe = black!0,
-	size=small,
-	colback  = white,
-	colupper= black!75,
-	coltitle = black,
-	halign title= center,
-	fontlower= \scriptsize,
-	fonttitle= \small, 
-	title    = {#2},
-	#1,
-}
+%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
+\input{sutras.tex}
 
-\newcommand{\heartblock}[3]
-{
-	
-	
-	\begin{kanjibox}{#1}
-		\kanji #2
-		\means #3
-	\end{kanjibox}
-	
-}
-
-\newcommand{\heartflow}[3]
-{
-	
-	\begin{kanjiflow}{#1}
-		\kanji #2
-		\means #3
-	\end{kanjiflow}
-	
-}
-
-
-
-
+%%%%%%%
+%%%%%% END PREABMBLE
+%%%%%%%
 
 \begin{document}
 	
@@ -123,14 +77,7 @@
 \end{multicols}
 \pagebreak
 
-
-	
-
-
 \renewcommand{\kanji}{\centering\fontsize{80}{80}}
-
-
-
 
 \vspace*{0.5cm}
 \begin{multicols}{4}
@@ -173,10 +120,7 @@
 	\heartflow{}{誓}{}
 	\heartflow{}{願}{}
 	\heartflow{}{成}{}
-	
-	
-	
-	
+
 	
 \end{multicols}
 
