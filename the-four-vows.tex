@@ -26,7 +26,7 @@
 %\setCJKmainfont{ipamp.ttf}  %% sans
 \setCJKmainfont{ipaexg.ttf}  %% sans
 
-\setCJKsansfont{Meiryo}   %%% residual not sure if needed
+\setCJKsansfont{Meiryo}
 
 %%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
 \input{sutras.tex}
@@ -36,6 +36,51 @@
 %%%%%%%
 
 \begin{document}
+	\vspace*{3cm}
+	
+	\centering {\Huge 聖経 
+		
+		\vspace*{0.5cm}
+		
+		sutra styles
+	}
+	
+	\vspace*{2cm}
+	    \large
+	    \begin{verbatim}
+		\input{sutras.tex}
+		\end{verbatim}}
+	
+	\vspace*{3cm}
+	
+	
+	\begin{verbatim}
+	%%% CHOICE OF FONTS
+	
+	%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
+	%\setCJKmainfont{ipam.ttf}  %% serif
+	%\setCJKmainfont{ipaexm.ttf}  %% serif
+	%\setCJKmainfont{ipag.ttf}  %% sans
+	%\setCJKmainfont{ipamp.ttf}  %% sans
+	\setCJKmainfont{ipaexg.ttf}  %% sans
+	
+	\setCJKsansfont{Meiryo}
+	
+	%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
+	\input{sutras.tex}
+	
+	%%% USAGE
+	
+	\heartblock{しゅう shu}{衆}{many \\ lines}  %% parameters may be blank, fixed height
+	
+	\heartflow{願}  %% variable height
+	
+	\heartspaced{無}  %% variable height with extra padding
+	
+	\end{verbatim}
+	
+	
+	\vfill\eject\pagebreak
 	
 \centering 四弘誓願 The Four Bodhisattva Vows
 
@@ -75,6 +120,10 @@
 \heartblock{じょう jou}{成}{become}
 
 \end{multicols}
+
+\begin{verbatim}
+\heartblock{}{}{}
+\end{verbatim}
 
 \vfill\eject\pagebreak
 
@@ -125,18 +174,22 @@
 
 \end{multicols}
 
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{55}{55}}
+\heartflow{}
+\end{verbatim}
+
 \vfill\eject\pagebreak
 
 %%%%% SMALL FLOWING TEXT
 \vspace*{2cm}
 \renewcommand{\kanji}{\centering\fontsize{40}{40}}
-
 \textcolor{gray}{\kanji{四弘誓願}}
 \vspace*{2cm}
 
+\renewcommand{\kanji}{\centering\fontsize{35}{35}}
 \begin{multicols}{7}
 	
-	\renewcommand{\kanji}{\centering\fontsize{35}{35}}
 	\RLmulticolcolumns
 	%%% 1
 	\heartflow{衆}
@@ -240,6 +293,12 @@
 	\heartflow{成}
 	\coda
 \end{multicols}	
+
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{35}{35}}
+\heartflow{}
+\coda %% dot after verse
+\end{verbatim}
 	
 	\vfill\eject\pagebreak
 	
@@ -252,7 +311,7 @@
 	
 	\begin{multicols}{4}
 		
-		\renewcommand{\kanji}{\centering\fontsize{35}{35}}
+		\renewcommand{\kanji}{\centering\fontsize{45}{45}}
 		\RLmulticolcolumns
 		%%% 1
 		\heartspaced{衆}
@@ -288,5 +347,10 @@
 		\heartspaced{成}
 		
 \end{multicols}
+
+\begin{verbatim}
+\renewcommand{\kanji}{\centering\fontsize{45}{45}}
+\heartspaced{}
+\end{verbatim}
 
 \end{document} 
