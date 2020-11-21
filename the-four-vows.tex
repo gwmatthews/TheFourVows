@@ -40,12 +40,35 @@
 	#1,
 }
 
+\newtcolorbox{kanjiflow}[2][]
+{
+	colframe = black!0,
+	size=small,
+	colback  = white,
+	colupper= black!30,
+	coltitle = black,
+	halign title= center,
+	fontlower= \scriptsize,
+	fonttitle= \small, 
+	title    = {#2},
+	#1,
+}
+
 \newcommand{\heartblock}[3]
 {
 	\begin{kanjibox}{#1}
 		\kanji #2
 		\means #3
 	\end{kanjibox}
+	
+}
+
+\newcommand{\heartflow}[3]
+{
+	\begin{kanjiflow}{#1}
+		\kanji #2
+		\means #3
+	\end{kanjiflow}
 	
 }
 
@@ -91,42 +114,66 @@
 \end{multicols}
 \pagebreak
 
-\renewcommand{\kanji}{\centering\fontsize{80}{80}}
+\renewcommand{\kanji}{\centering\fontsize{50}{50}}
+
+
+
 \vspace*{0.5cm}
-\begin{multicols}{4}
+\begin{multicols}{5}
 	\RLmulticolcolumns
 	
-	\heartblock{}{衆}{}
-	\heartblock{}{生}{}
-	\heartblock{}{無}{}
-	\heartblock{}{邊}{}
-	\heartblock{}{誓}{}
-	\heartblock{}{願}{}
-	\heartblock{}{度}{}
+	\heartflow{}{衆}{}
+	\heartflow{}{生}{}
+	\heartflow{}{無}{}
+	\heartflow{}{邊}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{度}{}
 	
-	\heartblock{}{煩}{}
-	\heartblock{}{悩}{}
-	\heartblock{}{無}{}
-	\heartblock{}{儘}{}
-	\heartblock{}{誓}{}
-	\heartblock{}{願}{}
-	\heartblock{}{斷}{}
+	\heartflow{}{煩}{}
+	\heartflow{}{悩}{}
+	\heartflow{}{無}{}
+	\heartflow{}{儘}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{斷}{}
 	
-	\heartblock{}{法}{}
-	\heartblock{}{門}{}
-	\heartblock{}{無}{}
-	\heartblock{}{量}{}
-	\heartblock{}{誓}{}
-	\heartblock{}{願}{}
-	\heartblock{}{學}{}
+	\heartflow{}{法}{}
+	\heartflow{}{門}{}
+	\heartflow{}{無}{}
+	\heartflow{}{量}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{學}{}
+	\heartflow{}{無}{}
+	\heartflow{}{儘}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{斷}{}
 	
-	\heartblock{}{佛}{}
-	\heartblock{}{道}{}
-	\heartblock{}{無}{}
-	\heartblock{}{上}{}
-	\heartblock{}{誓}{}
-	\heartblock{}{願}{}
-	\heartblock{}{成}{}
+	\heartflow{}{無}{}
+	\heartflow{}{儘}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{斷}{}
+	\heartflow{}{無}{}
+	\heartflow{}{儘}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{斷}{}
+	\heartflow{}{無}{}
+	\heartflow{}{儘}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{斷}{}
+	
+	\heartflow{}{佛}{}
+	\heartflow{}{道}{}
+	\heartflow{}{無}{}
+	\heartflow{}{上}{}
+	\heartflow{}{誓}{}
+	\heartflow{}{願}{}
+	\heartflow{}{成}{}
 	
 \end{multicols}
 
