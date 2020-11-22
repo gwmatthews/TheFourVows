@@ -1,0 +1,3 @@
+
+
+gawk '{$1=$1}1' FPAT='.{1}' OFS=, input.file  # to turn string of text into comma separated text
