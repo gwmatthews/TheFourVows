@@ -1,3 +1,8 @@
 
+# to turn string of text into comma separated text
+gawk '{$1=$1}1' FPAT='.{1}' OFS=, input.file  
 
-gawk '{$1=$1}1' FPAT='.{1}' OFS=, input.file  # to turn string of text into comma separated text
+
+# to compile all .tex to .pdf
+for i in 'the-four-vows*.tex'; do xelatex -synctex=1 -interaction=nonstopmode $i; done    
+
