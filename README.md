@@ -1,1 +1,1 @@
-My version of [Four Bodhisatva Vows](https://github.com/RoseWagsBlue/FourVows) by RoseWagsBlue. 
+This project has evolved from a reworking of [Four Bodhisatva Vows](https://github.com/RoseWagsBlue/FourVows) by RoseWagsBlue. It is now a set of templates for formatting Japanese texts written in kanji.
