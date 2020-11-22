@@ -1,110 +1,3 @@
-%    sutras for tracing, reading, chanting
-
-\documentclass[letterpaper]{article}
-\usepackage[left=2cm, right=2cm, top=0.3cm, bottom=0.3cm]{geometry}
-
-\usepackage{nopageno}
-\usepackage{multicol}
-\usepackage{xeCJK}
-\usepackage{anyfontsize}
-\usepackage{hyperref}
-\usepackage[most]{tcolorbox}
-
-\hypersetup {
-	pdfauthor= Rose DiFonzo (remix: George Matthews),
-	pdftitle={Sutra Styles},
-	pdfsubject={Buddhism, kanji, 四弘誓願  },
-	pdfkeywords={kanji, japan, wanikani, Bodhisattva, Buddhism, Buddha, 四弘誓願 },
-	colorlinks=true,
-	linkcolor=black,
-	anchorcolor=black,
-	citecolor=black,
-	filecolor=black,
-	menucolor=black,
-	runcolor=black,
-	urlcolor=black,
-	bookmarks=true
-}
-
-%%% CHOICE OF FONTS
-
-%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
-%\setCJKmainfont{ipam.ttf}  %% serif
-%\setCJKmainfont{ipaexm.ttf}  %% serif
-%\setCJKmainfont{ipag.ttf}  %% sans
-%\setCJKmainfont{ipamp.ttf}  %% sans
-\setCJKmainfont{ipaexg.ttf}  %% sans
-
-%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
-\input{sutras.tex}
-
-%%%%%%%
-%%%%%% END PREABMBLE
-%%%%%%%
-
-\begin{document}
-	\vspace*{3cm}
-	
-	\centering {\Huge 聖経 
-		
-		\vspace*{0.5cm}
-		
-		\href{https://github.com/gwmatthews/TheFourVows}{sutra styles}
-	}
-	
-
-	\vspace*{2cm}
-	    
-	    \begin{itemize}
-	    	\item[]  Some \LaTeX code for typesetting kanji texts.
-	    	\item[] Format for tracing, reading (with or without meanings and readings), and display.
-	    \end{itemize}
-	    
-	    
-	    
-	
-	\vspace*{1cm}
-	
-	
-	\begin{verbatim}
-	%%% CHOICE OF FONTS
-	
-	%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
-	%\setCJKmainfont{ipam.ttf}  %% serif
-	%\setCJKmainfont{ipaexm.ttf}  %% serif
-	%\setCJKmainfont{ipag.ttf}  %% sans
-	%\setCJKmainfont{ipamp.ttf}  %% sans
-	\setCJKmainfont{ipaexg.ttf}  %% sans
-		
-	%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
-	\input{sutras.tex}
-	
-	%%% USAGE
-	
-	\begin{multicols}{4}
-	 \RLmulticolcolumns
-	    \heartblock{しゅう shu}{衆}{many \\ lines}  %% {} may be blank, fixed height
-	    \heartflow{願}  %% variable height
-	    \heartspaced{無}  %% variable height with extra padding
-	\end{multicols}
-	\end{verbatim}
-	
-	\vspace*{1cm}
- 
-	\begin{itemize}
-		
-			\item[] {\Large 
-			 \href{https://github.com/gwmatthews/TheFourVows}{Source code is here.}}
-			 \item[] {\Large 
-			 	\href{https://gwmatthews.github.io/the-four-vows.pdf}{Demo is here.}}
-		
-	\end{itemize}
-	
-	
-	
-	
-	\vfill\eject\pagebreak
-	
 \centering 四弘誓願 The Four Bodhisattva Vows
 
 \begin{multicols}{4}
@@ -145,14 +38,9 @@
 
 \end{multicols}
 
-\begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{45}{45}}
-\heartblock{}{}{}
-\end{verbatim}
-
 \pagebreak
 
-\renewcommand{\kanji}{\centering\fontsize{60}{60}}
+\renewcommand{\kanji}{\centering\fontsize{65}{65}}
 
 \vspace*{0.5cm}
 \begin{multicols}{4}
@@ -196,11 +84,6 @@
 	\heartblock{}{成}{}
 	
 \end{multicols}
-
-\begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{60}{60}}
-\heartblock{}{無}{}
-\end{verbatim}
 
 \vfill\eject\pagebreak
 
@@ -250,11 +133,6 @@
 	\heartflow{成}
 
 \end{multicols}
-
-\begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{55}{55}}
-\heartflow{}
-\end{verbatim}
 
 \vfill\eject\pagebreak
 
@@ -371,12 +249,7 @@
 	\coda
 \end{multicols}	
 
-\begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{35}{35}}
-\heartflow{}
-\coda %% dot after verse
-\end{verbatim}
-	
+
 	\vfill\eject\pagebreak
 	
 	%%%%% SMALL FLOWING TEXT
@@ -425,51 +298,4 @@
 		
 \end{multicols}
 
-\begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{45}{45}}
-\heartspaced{}
-\end{verbatim}
-
-
-\vfill\eject\pagebreak
-
-\vspace*{3cm}
-
-
-{\LARGE Examples}
-
-\vspace*{1cm}
-
-
-
-\begin{itemize}
-	\item[] {\LARGE For tracing}
-	\begin{itemize}
-	\item[] \href{https://gwmatthews.github.io/the-four-vows-stroke-order.pdf}{KanjiStrokeOrders.ttf}
-\end{itemize}
-\end{itemize}
-
-\vspace*{1cm}
-
-\begin{itemize}
-	\item[] {\LARGE Serif}
-	\begin{itemize}
-	\item[] \href{https://gwmatthews.github.io/the-four-vows-ipaexm.pdf}{ipaexm.ttf}
-	\item[] \href{https://gwmatthews.github.io/the-four-vows-ipamp.pdf}{ipamp.ttf}
-	\item[] 
-	\href{https://gwmatthews.github.io/the-four-vows-ipam.pdf}{ipam.ttf}
-\end{itemize}
-\end{itemize}
-
-\vspace*{1cm}
-
-\begin{itemize}
-	\item[] {\LARGE Sans Serif}
-\begin{itemize}
-	\item[] \href{https://gwmatthews.github.io/the-four-vows-ipaexg.pdf}{ipaexg.ttf}
-	\item[] 
-	\href{https://gwmatthews.github.io/the-four-vows-ipag.pdf}{ipag.ttf}
-\end{itemize}
-\end{itemize}
-
-\end{document} 
+\endinput
