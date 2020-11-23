@@ -32,10 +32,7 @@
 		{\small for stylish sutras}
 	}
 
-
-	
-
-	\vspace*{2cm}
+\vspace*{2cm}
 	    
 	    \begin{itemize}
 	    	\item[]  Some \LaTeX code for typesetting kanji texts.
@@ -44,9 +41,7 @@
 	    \end{itemize}
 	    
 	    
-	    
-	
-	\vspace*{1cm}
+\vspace*{1cm}
 	
 	\begin{quotation}
 		
@@ -57,16 +52,15 @@
 	\begin{multicols}{4}
 	\RLmulticolcolumns
 	
-	  \heartblock{r}{K}{m}               % reading above; kanji large gray; meaning below
+	  \heartblock{r}{K}{m}               % reading above; KANJI large gray; meaning below
 	
-	  \heartflow{K}                      % dark gray text, variable boxes for kanji
-	
-	  \heartspaced{K}                    % variable boxes with additional padding
-	
-	  \haiku{abc \coda}                  % two columns \coda = 。
-	
-	  \compactverse{abcdef \stick ...}   % tightly set verse \stick = vertical 一
-	
+	  %%% mostly used implicitly by commands below
+	  \heartflow{K}                      % dark gray text, variable boxes for KANJI 
+	  \heartspaced{K}                    % variable boxes for KANJI with more padding
+	  
+	  %%% for setting verse
+	  \haiku{abc \coda}                  % two columns [ \coda = 。]
+	  \compactverse{abcdef \stick ...}   % tightly set verse [ \stick = vertical 一 ]
 	  \spacedverse{abcdef \stick  ...}   % spaciously set verse
 	
 	\end{multicols}
@@ -79,9 +73,9 @@
 	\begin{itemize}
 		
 			\item[] {\Large 
-			 \href{https://github.com/gwmatthews/TheFourVows}{Source code is here.}}
+			 \href{https://github.com/gwmatthews/TheFourVows}{source code}}
 			 \item[] {\Large 
-			 	\href{https://gwmatthews.github.io/the-four-vows.pdf}{Demo is here.}}
+			 	\href{https://gwmatthews.github.io/the-four-vows.pdf}{demo}}
 		
 	\end{itemize}
 	
@@ -536,7 +530,7 @@
 	\begin{verbatim}
 	
 	\compactVerse{%
-	   般若心經ロ \stick マ...     %%% \stick for vertical 一
+	   般若心經ロ \stick マ...     %%% \stick for vertical 一 
 	}
 	
 	\end{verbatim}

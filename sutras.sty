@@ -1,7 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{sutras}[2020/11/22 Sutras Package]
-\usepackage{keyval}
-\usepackage{kvoptions}
+
 \RequirePackage{xeCJK}
 \usepackage{nopageno}
 \usepackage{multicol}
@@ -9,7 +8,6 @@
 \usepackage{hyperref}
 \usepackage[most]{tcolorbox}
 \usepackage{cclicenses}
-\usepackage{forarray}
 
 
 \hypersetup {
@@ -97,7 +95,6 @@
 	\end{kanjiflow}
 }
 
-
 %%% display kanji with more padding
 
 \newcommand{\heartspaced}[1]
@@ -108,6 +105,7 @@
 }
 
 %%% For compact verses \compactverse{abcdefg}
+
 \def\flowloop#1{%
 	\ifx\relax#1
 	\else
@@ -116,6 +114,7 @@
 \def\compactVerse#1{\flowloop#1\relax}%
 
 %%% For spaced verses \spacedverse{abcdefg}
+
 \def\spacedloop#1{%
 	\ifx\relax#1
 	\else
@@ -124,6 +123,7 @@
 \def\spacedVerse#1{\spacedloop#1\relax}%
 
 %%% For haiku   \haiku{abcdefg}
+
 \def\haikuloop#1{%
 	\ifx\relax#1
 	\else
