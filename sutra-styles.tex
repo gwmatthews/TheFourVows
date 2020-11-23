@@ -1,25 +1,23 @@
 %    sutras for tracing, reading, chanting
 
 \documentclass[letterpaper]{article}
-\usepackage[left=2cm, right=2cm, top=0.3cm, bottom=0.3cm]{geometry}
+\usepackage[margin=0.5cm]{geometry}
 
-%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
-\input{sutras.tex}
+\usepackage{sutras}
+
 %%% CHOICE OF FONTS
-
 %\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
 \setCJKmainfont{ipam.ttf}  %% serif
 %\setCJKmainfont{ipaexm.ttf}  %% serif
 %\setCJKmainfont{ipag.ttf}  %% sans
 %\setCJKmainfont{ipamp.ttf}  %% sans
 %\setCJKmainfont{ipaexg.ttf}  %% sans
-%\setCJKmainfont{YOzM90.ttf}  %% sans
+%\setCJKmainfont{YOzM90.ttf}  %% calligraphic
 %\setCJKmainfont{Harano Aji Mincho SemiBold}  %% calligraphic
 %\setCJKmainfont{KouzanGyoushoOTF.otf}  %% calligraphic
 
-
 %%%%%%%
-%%%%%% END PREABMBLE
+%%%%%% END PREAMBLE
 %%%%%%%
 
 \begin{document}
@@ -29,8 +27,12 @@
 		
 		\vspace*{0.5cm}
 		
-		\href{https://github.com/gwmatthews/TheFourVows}{sutra styles}
+		\href{https://github.com/gwmatthews/TheFourVows}{\texttt{sutras.sty}}
+		
+		{\small for stylish sutras}
 	}
+
+
 	
 
 	\vspace*{2cm}
@@ -48,32 +50,23 @@
 	
 	
 	\begin{verbatim}
-	%%% CHOICE OF FONTS
-	
-	%\setCJKmainfont{KanjiStrokeOrders}  %% for tracing 
-	%\setCJKmainfont{ipam.ttf}  %% serif
-	%\setCJKmainfont{ipaexm.ttf}  %% serif
-	%\setCJKmainfont{ipag.ttf}  %% sans
-	%\setCJKmainfont{ipamp.ttf}  %% sans
-	%\setCJKmainfont{ipaexg.ttf}  %% sans
-	%\setCJKmainfont{YOzM90.ttf}  %% sans
-	%\setCJKmainfont{Harano Aji Mincho SemiBold}  %% calligraphic
-	\setCJKmainfont{KouzanGyoushoOTF.otf}  %% calligraphic
-		
-	%%% Provides \heartblock{}{}{}   \heartflow{}  \heartspaced{}
-	%%%%         \haiku{a,b,c}   \compactverse{a,b,c}  \spacedverse{a,b,c}  
-	
-	
-	\input{sutras.tex}
-	
-	%%% USAGE
+	\usepackage{sutras}
 	
 	\begin{multicols}{4}
-	 \RLmulticolcolumns
-	    \heartblock{しゅう shu}{衆}{many \\ lines}  %% {} may be blank, fixed height
-	    \heartflow{願}  %% variable height
-	    \heartspaced{無}  %% variable height with extra padding
-	    \haiku{a,b,c}
+	\RLmulticolcolumns
+	
+	\heartblock{r}{K}{m}           % reading above; kanji large gray; meaning below
+	
+	\heartflow{K}                  % dark gray text, variable boxes for kanji
+	
+	\heartspaced{K}                % variable boxes with additional padding
+	
+	\haiku{a,b,c}                  % two columns beginning and after 。
+	
+	\compactverse{a,b,c,d,e,f...}  % tightly set verse compact but readable
+	
+	\spacedverse{a,b,c,d,e,f...}   % spaciuosly set verse
+	
 	\end{multicols}
 	\end{verbatim}
 	
