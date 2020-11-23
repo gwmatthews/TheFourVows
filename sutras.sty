@@ -31,13 +31,11 @@
 
 %%% NEW COMMANDS
 \newcommand{\kanji}{\centering\fontsize{60}{60}}   %%% set main font size 
+
 \newcommand{\means}{\tcblower\centering}           %%% position lower text
 
 %%% For ending verses
 \newcommand{\coda}{	\vspace*{1ex}\heartflow{。}\vspace*{1ex}}
-
-%%% For Haikus
-\newcommand{\haiku}[2]{\coda\ForEach{,}{\heartspaced{\thislevelitem}}{#1}\coda{#2}}
 
 %%% To rotate 一
 \newcommand{\stick}{\scalebox{-1}[1]{\rotatebox[origin=lb]{90}{ー}}\hspace*{1em}}
@@ -115,7 +113,7 @@
 	\else
 	\heartflow{#1}\expandafter\flowloop%
 	\fi}
-\def\compactverse#1{\flowloop#1\relax}%
+\def\compactVerse#1{\flowloop#1\relax}%
 
 %%% For spaced verses \spacedverse{abcdefg}
 \def\spacedloop#1{%
@@ -123,7 +121,7 @@
 	\else
 	\heartspaced{#1}\expandafter\spacedloop%
 	\fi}
-\def\spacedverse#1{\spacedloop#1\relax}%
+\def\spacedVerse#1{\spacedloop#1\relax}%
 
 %%% For haiku   \haiku{abcdefg}
 \def\haikuloop#1{%
