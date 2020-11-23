@@ -50,24 +50,24 @@
 	
 	\begin{quotation}
 		
-	
 	\begin{verbatim}
+	
 	\usepackage{sutras}
 	
 	\begin{multicols}{4}
 	\RLmulticolcolumns
 	
-	\heartblock{r}{K}{m}           % reading above; kanji large gray; meaning below
+	  \heartblock{r}{K}{m}               % reading above; kanji large gray; meaning below
 	
-	\heartflow{K}                  % dark gray text, variable boxes for kanji
+	  \heartflow{K}                      % dark gray text, variable boxes for kanji
 	
-	\heartspaced{K}                % variable boxes with additional padding
+	  \heartspaced{K}                    % variable boxes with additional padding
 	
-	\haiku{a,b,c}                  % two columns beginning and after 。
+	  \haiku{abc \coda}                  % two columns \coda = 。
 	
-	\compactverse{a,b,c,d,e,f...}  % tightly set verse compact but readable
+	  \compactverse{abcdef \stick ...}   % tightly set verse \stick = vertical 一
 	
-	\spacedverse{a,b,c,d,e,f...}   % spaciuosly set verse
+	  \spacedverse{abcdef \stick  ...}   % spaciously set verse
 	
 	\end{multicols}
 	\end{verbatim}
@@ -193,8 +193,9 @@
 \end{multicols}
 
 \begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{45}{45}}
-\heartblock{}{}{}
+
+    \heartblock{}{}{}
+
 \end{verbatim}
 
 \pagebreak
@@ -245,8 +246,9 @@
 \end{multicols}
 
 \begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{60}{60}}
-\heartblock{}{無}{}
+
+    \heartblock{}{無}{}
+    
 \end{verbatim}
 
 \vfill\eject\pagebreak
@@ -299,8 +301,9 @@
 \end{multicols}
 
 \begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{55}{55}}
-\heartflow{}
+
+    \heartflow{}
+    
 \end{verbatim}
 
 \vfill\eject\pagebreak
@@ -419,9 +422,9 @@
 \end{multicols}	
 
 \begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{35}{35}}
-\heartflow{}
-\coda %% dot after verse
+
+    \heartflow{}
+    
 \end{verbatim}
 	
 	\vfill\eject\pagebreak
@@ -484,17 +487,14 @@
 \begin{multicols}{4}
 	\RLmulticolcolumns
 	\renewcommand{\kanji}{\centering\fontsize{35}{35}}
-	\haiku{繰,り,返,し,麦,の,畝,縫,ふ,胡,蝶,哉}
-	\haiku{寒,月,に,木,を,割,る,寺,の,男,か,な}	
+	\haiku{繰り返し麦の畝縫ふ胡蝶哉 \coda}
+	\haiku{寒月に木を割る寺の男かな \coda}	
 \end{multicols}
 
 \begin{verbatim}
-\begin{multicols}{4}
-\RLmulticolcolumns
-\renewcommand{\kanji}{\centering\fontsize{35}{35}}
-\haiku{繰,り,返,し,麦,の,畝,縫,ふ,胡,蝶,哉}
-\haiku{寒,月,に,木,を,割,る,寺,の,男,か,な}	
-\end{multicols}
+ 
+    \haiku{繰り返し麦の畝縫ふ胡蝶哉 \coda}
+    
 \end{verbatim}
 
 
@@ -504,19 +504,17 @@
 \renewcommand{\kanji}{\centering\fontsize{25}{25}}
 \begin{multicols}{7}
 	\RLmulticolcolumns
-	\spacedverse{
-		般,若,心,經,ロ,\stick,マ,字,佛,説,摩,訶,般,若,波,羅,蜜,多,心,經,観,自,在,菩,薩,行,深,般,若,波,羅,蜜,多,時,照,見,五,蘊,皆,空,度,\stick,切,苦,厄,舎,利,子,色,不,異,空,空,不,異,色,色,即,是,空,空,即,是,色,受,想,行,識,亦,復,如,是...
+	\spacedverse{%
+		般若心經ロ\stick マ字佛説摩訶般若波羅蜜多心經観自在菩薩行深般若波羅蜜多時照見五蘊皆空度 \stick 切苦厄
 	}
 \end{multicols}
 
 \begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{25}{25}}
-\begin{multicols}{7}
-\RLmulticolcolumns
+
 	\spacedverse{
-		般,若,心,經,ロ,\stick,マ,...      %%% \stick for vertical 一
+		般若心經ロ \stick マ...      %%% \stick for vertical 一
 	}
-\end{multicols}
+
 \end{verbatim}
 
 \pagebreak
@@ -526,21 +524,24 @@
 \renewcommand{\kanji}{\centering\fontsize{25}{25}}
 \begin{multicols}{7}
 	\RLmulticolcolumns
-	\compactverse{
-		般,若,心,經,ロ,\stick,マ,字,佛,説,摩,訶,般,若,波,羅,蜜,多,心,經,観,自,在,菩,薩,行,深,般,若,波,羅,蜜,多,時,照,見,五,蘊,皆,空,度,\stick,切,苦,厄,舎,利,子,色,不,異,空,空,不,異,色,色,即,是,空,空,即,是,色,受,想,行,識,亦,復,如,是...
+	\compactverse{%
+		般若心經ロ\stick マ字佛説摩訶般若波羅蜜多心經観自在菩薩行深般若波羅蜜多時照見五蘊皆空度 \stick 切苦厄
 	}
 \end{multicols}
 
 \vspace*{1cm}
 
-\begin{verbatim}
-\renewcommand{\kanji}{\centering\fontsize{25}{25}}
-\begin{multicols}{7}
-\RLmulticolcolumns
-	\compactverse{
-		般,若,心,經,ロ,\stick,マ,...     %%% \stick for vertical 一
+\begin{quotation}
+	
+	\begin{verbatim}
+	
+	\compactverse{5
+	   般若心經ロ \stick マ...     %%% \stick for vertical 一
 	}
-\end{multicols}
-\end{verbatim}
+	
+	\end{verbatim}
+	
+\end{quotation}
+
 
 \end{document} 

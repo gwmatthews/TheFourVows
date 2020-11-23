@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{sutras}[2020/11/22 Sutras Package]
 \usepackage{keyval}
+\usepackage{kvoptions}
 \RequirePackage{xeCJK}
 \usepackage{nopageno}
 \usepackage{multicol}
@@ -9,16 +10,6 @@
 \usepackage[most]{tcolorbox}
 \usepackage{cclicenses}
 \usepackage{forarray}
-
-%\define@key{font}{serif-1}{\setCKKmainfont{ipam.ttf}}
-%\define@key{font}{serif-2}{\setCKKmainfont{ipaexm.ttf}}
-%\define@key{font}{sans-1}{\setCKKmainfont{ipag.ttf}}
-%\define@key{font}{sans-2}{\setCKKmainfont{ipamp.ttf}}
-%\define@key{font}{sans-3}{\setCKKmainfont{ipaexg.ttf}}
-%\define@key{font}{cal-1}{\setCKKmainfont{YOzM90.ttf}}
-%\define@key{font}{cal-2}{\setCKKmainfont{Harano Aji Mincho SemiBold}}
-%\define@key{font}{cal-3}{\setCKKmainfont{KouzanGyoushoOTF.otf}}
-%\define@key{font}{stroke}{\setCKKmainfont{KanjiStrokeOrders}}
 
 
 \hypersetup {
@@ -45,14 +36,8 @@
 %%% For ending verses
 \newcommand{\coda}{	\vspace*{1ex}\heartflow{。}\vspace*{1ex}}
 
-%%% For building verses
-\newcommand{\compactverse}[1]{\ForEach{,}{\heartflow{\thislevelitem}}{#1}\coda}
-
-%%% For building spaced verses
-\newcommand{\spacedverse}[1]{\ForEach{,}{\heartspaced{\thislevelitem}}{#1}\coda}
-
 %%% For Haikus
-\newcommand{\haiku}[1]{\coda\ForEach{,}{\heartspaced{\thislevelitem}}{#1}\coda}
+\newcommand{\haiku}[2]{\coda\ForEach{,}{\heartspaced{\thislevelitem}}{#1}\coda{#2}}
 
 %%% To rotate 一
 \newcommand{\stick}{\scalebox{-1}[1]{\rotatebox[origin=lb]{90}{ー}}\hspace*{1em}}
@@ -119,9 +104,34 @@
 
 \newcommand{\heartspaced}[1]
 {
-	\begin{kanjiflow}[size=normal, boxsep=1ex]{}
+	\begin{kanjiflow}[size=normal]{}
 		\kanji #1
 	\end{kanjiflow}
 }
+
+%%% For compact verses \compactverse{abcdefg}
+\def\flowloop#1{%
+	\ifx\relax#1
+	\else
+	\heartflow{#1}\expandafter\flowloop%
+	\fi}
+\def\compactverse#1{\flowloop#1\relax}%
+
+%%% For spaced verses \spacedverse{abcdefg}
+\def\spacedloop#1{%
+	\ifx\relax#1
+	\else
+	\heartspaced{#1}\expandafter\spacedloop%
+	\fi}
+\def\spacedverse#1{\spacedloop#1\relax}%
+
+%%% For haiku   \haiku{abcdefg}
+\def\haikuloop#1{%
+	\ifx\relax#1
+	\else
+	\heartspaced{#1}\expandafter\haikuloop%
+	\fi}
+\def\haiku#1{\haikuloop#1\relax}%
+
 
 \endinput
