@@ -123,7 +123,6 @@
 \def\spacedloop#1{%
 	\ifx\relax#1
 	\else
-	\renewcommand{\kanji}{\centering\fontsize{#2}{#2}}
 	\heartspaced{#1}\expandafter\spacedloop%
 	\fi}
 \def\spacedVerse#1{\spacedloop#1\relax}%
