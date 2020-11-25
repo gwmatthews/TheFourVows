@@ -10,21 +10,21 @@
 \usepackage{cclicenses}
 
 
-%%\hypersetup {
-%	pdfauthor= George Matthews,
-%	pdftitle={Sutra Styles},
-%	pdfsubject={Buddhism, kanji, 四弘誓願  },
-%	pdfkeywords={kanji, japan, wanikani, Bodhisattva, Buddhism, Buddha, 四弘誓願 },
-%	colorlinks=true,
-%	linkcolor=black,
-%	anchorcolor=black,
-%	citecolor=black,
-%	filecolor=black,
-%	menucolor=black,
-%	runcolor=black,
-%	urlcolor=black,
-%	bookmarks=true
-%}
+\hypersetup {
+	pdfauthor= George Matthews,
+	pdftitle={Sutra Styles},
+	pdfsubject={Buddhism, kanji, 四弘誓願  },
+	pdfkeywords={kanji, japan, wanikani, Bodhisattva, Buddhism, Buddha, 四弘誓願 },
+	colorlinks=true,
+	linkcolor=black,
+	anchorcolor=black,
+	citecolor=black,
+	filecolor=black,
+	menucolor=black,
+	runcolor=black,
+	urlcolor=black,
+	bookmarks=true
+}
 
 
 %%% NEW COMMANDS
@@ -123,9 +123,11 @@
 \def\spacedloop#1{%
 	\ifx\relax#1
 	\else
+	\renewcommand{\kanji}{\centering\fontsize{#2}{#2}}
 	\heartspaced{#1}\expandafter\spacedloop%
 	\fi}
 \def\spacedVerse#1{\spacedloop#1\relax}%
+
 
 %%% For haiku   \haiku{abcdefg}
 
