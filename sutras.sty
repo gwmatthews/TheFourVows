@@ -61,6 +61,25 @@
 	#1,
 }
 
+%%%%%%%%%%%%%%
+% FIXED HEIGHT BOX FOR INCLUDING READINGS 
+% #1: tcolorbox options
+% #2: box title
+
+\newtcolorbox{smallkanjibox}[2][]
+{
+	colframe = black!0,
+	height=2.5cm,    %%%% fixed height boxes!
+	size=small,
+	colback  = white,
+	coltitle = black,
+	halign title= center,
+	fontlower= \scriptsize,
+	fonttitle= \small, 
+	title    = {#2},
+	#1,
+}
+
 %%% display reading, kanji and meaning
 \newcommand{\heartblock}[3]
 {
@@ -68,6 +87,15 @@
 		\kanji #2
 		\means #3
 	\end{kanjibox}
+}
+%%%%%%%%%%%%%%%%
+
+%%% display kanji and reading
+\newcommand{\heartreading}[2]
+{
+	\begin{smallkanjibox}{#1}
+		\kanji #2
+	\end{smallkanjibox}
 }
 %%%%%%%%%%%%%%%%
 
