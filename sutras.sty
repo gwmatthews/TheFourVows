@@ -7,6 +7,7 @@
 \usepackage{anyfontsize}
 \usepackage{hyperref}
 \usepackage[most]{tcolorbox}
+\tcbuselibrary{skins}
 \usepackage{cclicenses}
 
 
@@ -29,6 +30,7 @@
 
 %%% NEW COMMANDS
 \newcommand{\kanji}{\centering\fontsize{60}{60}}   %%% set main font size 
+\newcommand{\smallkanji}{\centering\fontsize{25}{25}}   %%% set main font size 
 
 \newcommand{\means}{\tcblower\centering}           %%% position lower text
 
@@ -98,6 +100,29 @@
 	#1,
 }
 
+%%%%%%%%%%%%%%
+% FIXED HEIGHT BOX FOR FLASHCARDS
+% #1: tcolorbox options
+% #2: box title
+
+\newtcolorbox{flashbox}[2][]
+{
+	height = 4.5cm,
+	width = 6cm,
+	top=5mm,
+	toptitle=5mm,
+	middle=5mm,
+	colback  = white,
+	colbacktitle = white,
+	halign title= center,
+	fontlower= \Large,
+	fonttitle= \Large, 
+	title    = {#2},
+	#1,
+}
+
+
+
 %%% display reading, kanji and meaning
 \newcommand{\heartblock}[3]
 {
@@ -114,6 +139,26 @@
 	\begin{smallkanjibox}{#1}
 		\kanji #2
 	\end{smallkanjibox}
+}
+%%%%%%%%%%%%%%%%
+
+%%% display reading, kanji and meaning
+\newcommand{\flashFront}[3]
+{
+	\begin{flashbox}[coltitle=white, collower=white, colbacktitle= white]{#1}
+		\smallkanji #2
+		\means #3
+	\end{flashbox}
+}
+%%%%%%%%%%%%%%%%
+
+%%% display kanji and reading
+\newcommand{\flashBack}[3]
+{
+	\begin{flashbox}[coltitle=black, collower=black, colupper=white]{#1}
+		\smallkanji #2
+		\means #3
+	\end{flashbox}
 }
 %%%%%%%%%%%%%%%%
 
