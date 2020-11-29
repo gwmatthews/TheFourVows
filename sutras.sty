@@ -50,7 +50,7 @@
 
 %%% For styling flashcards
 
-	\newcommand{\flashset}{\tcbset{enhanced, segmentation hidden, frame hidden, borderline={1pt}{5pt}{gray, rounded corners}}}
+\newcommand{\flashset}{\tcbset{enhanced, segmentation hidden, frame hidden, borderline south={0.5pt}{-6.5pt}{black}, borderline north={0.5pt}{0pt}{black}}}
 
 %% for credits page
 
@@ -115,7 +115,7 @@
 % #2: box title
 
 \newtcolorbox{flashbox}[2][]
-{
+{    
 	height = 4.8cm,
 	width = 6.5cm,
 	top=-5mm,
@@ -124,8 +124,8 @@
 	colback  = white,
 	colbacktitle = white,
 	halign title= center,
-	fontlower= \large,
-	fonttitle= \Large, 
+%	fontlower= \large,
+%	fonttitle= \Large, 
 	title    = {#2},
 	#1,
 }
