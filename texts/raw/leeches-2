@@ -1,0 +1,183 @@
+%%% 1
+\renewcommand{\smallkanji}{\centering\fontsize{50}{50}}
+
+
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+﻿{(radical)}{幺}{Poop}
+\flashFront{(radical)}{禾}{Grain}
+\flashFront{(radical)}{己}{Oneself}
+
+\flashFront{とう}{刀}{Sword}
+\flashFront{りょう}{了}{Finish}
+\flashFront{すい}{水}{Water}
+\flashFront{たま}{玉}{Ball}
+\flashFront{しょう}{少}{Few}
+\flashFront{ぎゅう}{牛}{Cow}
+\flashFront{はん}{半}{Half}
+\flashFront{ほ}{歩}{Walk}
+\flashFront{ち}{知}{Know}
+\flashFront{し}{氏}{Family Name}
+\flashFront{ゆう}{由}{Reason}
+\flashFront{みん}{民}{Peoples}
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{ひつ}{必}{Certain}
+\flashFront{きょう}{教}{Teach}
+\flashFront{とう}{投}{Throw}
+\flashFront{わ}{和}{Peace}
+\flashFront{てい}{定}{Determine}
+\flashFront{ぶ}{部}{Part}
+\flashFront{そう}{相}{Mutual}
+\flashFront{び}{美}{Beauty}
+\flashFront{れい}{令}{Orders}
+\flashFront{い}{意}{Idea}
+\flashFront{し}{試}{Try}
+
+# VOCAB
+
+\renewcommand{\smallkanji}{\centering\fontsize{50}{50}}
+
+
+
+\flashFront{ぼく}{僕}{I}
+\flashFront{さげる}{下げる}{To Lower}
+\flashFront{つち}{土}{Soil}
+\flashFront{ちいさい}{小さい}{Small}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{さい}{〜才}{Years Old}
+\flashFront{むっつ}{六つ}{Six Things}
+\flashFront{てんさい}{天才}{Genius}
+\flashFront{ぶん}{文}{Writing}
+\flashFront{みず}{水}{Water}
+\flashFront{おうじょ}{王女}{Princess}
+\flashFront{でる}{出る}{To Exit}
+\flashFront{しがつ}{四月}{April}
+\flashFront{ただす}{正す}{To Correct}
+\flashFront{びーだま}{ビー玉}{Marble}
+\flashFront{たまねぎ}{玉ねぎ}{Onion}
+\flashFront{た}{田}{Rice Field}
+\flashFront{はくじん}{白人}{Caucasian}
+\flashFront{たてる}{立てる}{To Stand Something Up}
+\flashFront{みょうじ}{名字}{Surname}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{ねんじゅう}{年中}{Year Round}
+\flashFront{みみうち}{耳打ち}{Whisper In Ear}
+\flashFront{みかた}{見方}{Way Of Seeing}
+\flashFront{たりる}{足りる}{To Be Enough}
+\flashFront{よ}{世}{World}
+\flashFront{しゅじん}{主人}{Head Of Household}
+\flashFront{ほか}{他}{Other}
+\flashFront{たにん}{他人}{Another Person}
+\flashFront{だいよう}{代用}{Substitution}
+\flashFront{うつる}{写る}{To Be Photographed}
+\flashFront{さくぶん}{作文}{Composition}
+\flashFront{しかく}{四角}{Square}
+\flashFront{きんじつ}{近日}{Soon}
+\flashFront{すべて}{全て}{All}
+\flashFront{ほうこう}{方向}{Direction}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{めいきょく}{名曲}{Famous Music}
+\flashFront{じかい}{次回}{Next Time}
+\flashFront{ねんじ}{年次}{Annual}
+\flashFront{ひつじ}{羊}{Sheep}
+\flashFront{しゅっけつ}{出血}{Bleeding}
+\flashFront{しょうじき}{正直}{Honest}
+\flashFront{あたり}{辺り}{Area}
+\flashFront{いがい}{以外}{Other Than}
+\flashFront{いぜん}{以前}{Previously}
+\flashFront{どうじ}{同時}{Same Time}
+\flashFront{こうつう}{交通}{Traffic}
+\flashFront{けっしん}{決心}{Determination}
+\flashFront{たしょ}{他所}{Another Place}
+\flashFront{じかん}{時間}{Time}
+\flashFront{かぞえる}{数える}{To Count}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{にんずう}{人数}{The Number Of People}
+\flashFront{てんすう}{点数}{Points}
+\flashFront{どうぐ}{道具}{Tool}
+\flashFront{めいぶつ}{名物}{Local Specialty}
+\flashFront{ちゃや}{茶屋}{Tea Shop}
+\flashFront{もつ}{持つ}{To Hold}
+\flashFront{せかい}{世界}{The World}
+\flashFront{はつおん}{発音}{Pronunciation}
+\flashFront{そうだん}{相談}{Consultation}
+\flashFront{ひつよう}{必要}{Necessary}
+\flashFront{ようてん}{要点}{Main Point}
+\flashFront{さっそく}{早速}{At Once}
+\flashFront{ころがる}{転がる}{To Roll}
+\flashFront{かいはつ}{開発}{Development}
+\flashFront{あつめる}{集める}{To Collect}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{もっとも}{最も}{The Most}
+\flashFront{あらそう}{争う}{To Compete}
+\flashFront{なかなおり}{仲直り}{Reconciliation}
+\flashFront{つたえる}{伝える}{To Transmit}
+\flashFront{きょうどう}{共同}{Cooperation}
+\flashFront{くろう}{苦労}{Hardship}
+\flashFront{そそぐ}{注ぐ}{To Pour}
+\flashFront{うごく}{動く}{To Move}
+\flashFront{なくなる}{亡くなる}{To Pass Away}
+\flashFront{じんせい}{人生}{One's Life}
+\flashFront{にんぎょう}{人形}{Doll}
+\flashFront{ちかづく}{近づく}{To Get Close}
+\flashFront{さきまわり}{先回り}{Arriving Ahead}
+\flashFront{よのなか}{世の中}{Society}
+\flashFront{まったく}{全く}{Completely}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{ながさ}{長さ}{Length}
+\flashFront{まじる}{交じる}{To Be Mixed}
+\flashFront{はしりまわる}{走り回る}{To Run Around}
+\flashFront{あてる}{当てる}{To Guess}
+\flashFront{つく}{付く}{To Be Attached}
+\flashFront{しんぱい}{心配}{A Worry}
+\flashFront{きゅうじん}{求人}{Help Wanted}
+\flashFront{しんり}{心理}{Mental State}
+\flashFront{こころみる}{試みる}{To Try}
+\flashFront{ほんとう}{本当}{Reality}
+\flashFront{たいだん}{対談}{Conversation}
+\flashFront{おもわず}{思わず}{Unintentionally}
+\flashFront{おもて}{表}{Front}
+\flashFront{いっしょう}{一生}{Whole Life}
+\flashFront{かかす}{欠かす}{To Miss}
+
+
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\flashFront{よう}{用}{Task}
+\flashFront{みあたる}{見当たる}{To Be Found}
+\flashFront{つける}{点ける}{To Turn On}
+\flashFront{すいちゅう}{水中}{Underwater}
+\flashFront{ばんぐみ}{番組}{Program}
+\flashFront{ぶしつ}{部室}{Clubroom}
+\flashFront{きんじょ}{近所}{Neighborhood}
