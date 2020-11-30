@@ -34,8 +34,8 @@
 
 
 %%% NEW COMMANDS
-\newcommand{\kanji}{\centering\fontsize{60}{60}}   %%% set main font size 
-\newcommand{\smallkanji}{\centering\fontsize{25}{25}}   %%% set main font size 
+\newcommand{\kanji}{\centering\fontsize{64}{64}}   %%% set main font size 
+\newcommand{\smallkanji}{\centering\fontsize{24}{24}}   %%% set main font size 
 
 \newcommand{\means}{\tcblower\centering}           %%% position lower text
 
@@ -118,14 +118,14 @@
 {    
 	height = 4.8cm,
 	width = 6.5cm,
-	top=-5mm,
-	toptitle=15mm,
-	middle=2mm,
+	toptitle=24pt,
 	colback  = white,
 	colbacktitle = white,
 	halign title= center,
-%	fontlower= \large,
-%	fonttitle= \Large, 
+	halign=center,
+	valign=center,
+	fontlower= \fontsize{12}{12},
+	fonttitle= \fontsize{24}{24}, 
 	title    = {#2},
 	#1,
 }
