@@ -1,7 +1,7 @@
 %    sutras for tracing, reading, chanting
 
 \documentclass[letterpaper]{article}
-\usepackage[margin=0.5cm]{geometry}
+\usepackage[margin=2cm]{geometry}
 
 \usepackage{sutras}
 
@@ -23,13 +23,14 @@
 \begin{document}
 	\vspace*{1cm}
 	
-	\centering {\Huge 聖経 
+	 {\centering\Huge 聖経 
 		
 		\vspace*{0.25cm}
 		
-		\href{https://github.com/gwmatthews/TheFourVows}{\texttt{sutras.sty}}
+		\href{https://github.com/gwmatthews/TheFourVows}{\texttt{sutras.sty}
+		{\small for stylish sutras}}
 		
-		{\small for stylish sutras}
+		
 	}
 
 \vspace*{0.5cm}
@@ -91,6 +92,45 @@
 			 	\href{https://gwmatthews.github.io/the-four-vows.pdf}{demo}}
 		
 	\end{itemize}
+	\vfill\eject\pagebreak
+	
+	
+	
+	{\LARGE Flashcards}
+	
+	\vspace*{2cm}
+	
+	The flashcards/ subdirectory contains a linux bash script that automates the production of flashcards from csv data files. The data file format, which is the result of the wanikani Item Inspector script settings listed below looks like so:
+	
+	\begin{verbatim}
+	
+	"とう",刀,"Sword"
+	"りょう",了,"Finish"
+	"しょう",少,"Few"
+	
+	\end{verbatim}
+	
+	
+	\begin{itemize}
+		\item[] \LaTeX requirements: multicols, tcolorbox, xeCJK, anyfontsize, nopagno, xelatex, pdfpages (optional)
+		\item[] Wanikani item inspector settings:
+		\begin{itemize}
+			\item[] filter: kanji and vocabulary only
+			\item[] columns: Reading Brief, Item, Meaning Brief
+			\item[] cell separator => comma, use of quotes => only when needed
+		\end{itemize}
+	\end{itemize}
+
+
+\begin{verbatim}
+$#> cp yourFile.csv flashcards/
+$#> cd flashcards
+$#> chmod +x flash.sh      # if needed
+$#> ./flash.sh yourFile    # no .csv extension!
+
+\end{verbatim}
+
+What this script does is reformat the csv file, split it into sections that fit on a page, and combine these with the page templates \verb|cards.tex| and \verb|card-frame| to produce front and back pages in pdf format. Use a pdf reshuffler or the optional \verb|remix.tex| file for semi-automated reshuffling of pages so fronts and backs are together. I still have to figure out how to automate the reshuffling of the card sheets.	
 	
 	
 	\vfill\eject\pagebreak
@@ -106,7 +146,7 @@
 		\item[] \href{https://gwmatthews.github.io/the-four-vows-plain.pdf}{四弘誓願: the four bodhisattva vows, plain version}
 		\item[] \href{https://gwmatthews.github.io/the-heart-sutra.pdf}{般若心経: the heart sutra}
 		\item[] \href{https://gwmatthews.github.io/kanzeon.pdf}{延命十句觀音經: the ten verse kannon sutra}
-		\item[] \href{https://gwmatthews.github.io/leech-cards.pdf}{FLASHCARDS}
+		\item[] \href{https://gwmatthews.github.io/leeches-cards.pdf}{flashcards}
 		\item[] \href{https://gwmatthews.github.io/examples/stroke-order.pdf}{KanjiStrokeOrders.ttf}
 		\item[] \href{https://gwmatthews.github.io/examples/ipaexm.pdf}{ipaexm.ttf}
 		\item[] \href{https://gwmatthews.github.io/examples/ipamp.pdf}{ipamp.ttf}
@@ -120,15 +160,10 @@
 		\item[] \href{https://gwmatthews.github.io/examples/KouzanGyousho.pdf}{KouzanGyoushoOTF.otf}
 		\item[] \href{https://gwmatthews.github.io/examples/verse-test.pdf}{verse styles}
 		
-	\end{itemize}
+\end{itemize}
 
-
-	
-	
-	
-	
-	\vfill\eject\pagebreak
-	
+\vfill\eject\pagebreak
+\newgeometry{margin=0.5cm}
 \centering 四弘誓願 The Four Bodhisattva Vows
 
 \begin{multicols}{4}

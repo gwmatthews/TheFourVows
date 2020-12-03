@@ -1,0 +1,11 @@
+\renewcommand{\smallkanji}{\centering\fontsize{34}{34}}
+\begin{multicols}{3}
+\RLmulticolcolumns
+
+\renewcommand{\smallkanji}{\centering\fontsize{34}{34}}
+\begin{multicols}{3}
+\LRmulticolcolumns
+
+
+\end{multicols}
+\endinput
