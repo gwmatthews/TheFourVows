@@ -112,7 +112,7 @@
 	
 	
 	\begin{itemize}
-		\item[] \LaTeX requirements: multicols, tcolorbox, xeCJK, anyfontsize, nopagno, xelatex, pdfpages (optional)
+		\item[] \LaTeX requirements: multicols, tcolorbox, xeCJK, anyfontsize, nopagno, xelatex, pdfpages, pdfinfo
 		\item[] Wanikani item inspector settings:
 		\begin{itemize}
 			\item[] filter: kanji and vocabulary only
@@ -121,12 +121,12 @@
 		\end{itemize}
 		\item[] examples
 			\begin{itemize}
-            \item[] \href{https://gwmatthews.github.io/vocab-9-cards.pdf}{Level 9 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-10-cards.pdf}{Level 10 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-11-cards.pdf}{Level 11 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-12-cards.pdf}{Level 12 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-13-cards.pdf}{Level 13 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/leeches-cards.pdf}{my leeches}
+            \item[] \href{https://gwmatthews.github.io/vocab-9.pdf}{Level 9 Vocabulary}
+\item[] \href{https://gwmatthews.github.io/vocab-10.pdf}{Level 10 Vocabulary}
+\item[] \href{https://gwmatthews.github.io/vocab-11.pdf}{Level 11 Vocabulary}
+\item[] \href{https://gwmatthews.github.io/vocab-12.pdf}{Level 12 Vocabulary}
+\item[] \href{https://gwmatthews.github.io/vocab-13.pdf}{Level 13 Vocabulary}
+\item[] \href{https://gwmatthews.github.io/leeches.pdf}{my leeches}
 
 			\end{itemize}
 	\end{itemize}
@@ -142,7 +142,7 @@ $#> ./flash.sh yourFile    # no .csv extension!
 
 \end{verbatim}
 
-What this script does is reformat the csv file, split it into sections that fit on a page, and combine these with the page templates \verb|cards.tex| and \verb|card-frame| to produce front and back pages in pdf format. Use a pdf reshuffler or the optional \verb|remix.tex| file for semi-automated reshuffling of pages so fronts and backs are together. I still have to figure out how to automate the reshuffling of the card sheets.	
+What this script does is reformat the csv file, split it into sections that fit on a page, and combine these with the page templates \verb|cards.tex| and \verb|card-frame| to produce front and back pages in pdf format. It then assembles a pdf file for printing.	
 	
 	
 	\vfill\eject\pagebreak
