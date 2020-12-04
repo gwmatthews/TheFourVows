@@ -1,5 +1,5 @@
 #!/bin/bash
-
+### IN PLACE OF A PROPER MAKEFILE rebuilds and pushes everything
 MESSAGE=$1
 
 for file in kanzeon.tex sutra-styles.tex the-four-vows.tex the-four-vows-plain.tex the-heart-sutra.tex; do xelatex $file; done
