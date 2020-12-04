@@ -15,13 +15,15 @@ cd ..
 
 ./update.sh
 
+cp -rv examples/*.pdf ../../github/gwmatthews.github.io.git/examples
+cd flashcards
+for cards in vocab-9 vocab-10 vocab-11 vocab-12 vocab-13 leeches; do ./flash.sh $cards; done
+cp *.pdf ..
+cd ..
+cp -v *.pdf ../../github/gwmatthews.github.io.git/
 git add .
 git commit -m rebuild
 git push
-cp -rv examples/*.pdf ../../github/gwmatthews.github.io.git/examples
-cp -v *.pdf ../../github/gwmatthews.github.io.git/
-cp flashcards/*-cards.pdf .
-
 cd ../../github/gwmatthews.github.io.git/
 git add .
 git commit -m rebuild
