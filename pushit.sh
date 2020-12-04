@@ -16,7 +16,7 @@ cd ..
 ./update.sh
 
 git add .
-git commit -m MESSAGE
+git commit -m rebuild
 git push
 cp -rv examples/*.pdf ../../github/gwmatthews.github.io.git/examples
 cp -v *.pdf ../../github/gwmatthews.github.io.git/
@@ -24,5 +24,5 @@ cp flashcards/*-cards.pdf .
 
 cd ../../github/gwmatthews.github.io.git/
 git add .
-git commit -m MESSAGE
+git commit -m rebuild
 git push
