@@ -28,7 +28,7 @@ xelatex $1-cards.tex
 #
 ## initialize variables
 #
-PAGES=$(pdfinfo $SET-cards.pdf | grep "Pages" | awk '{print $NF}')    ## Extract number of paages in cards file                                                                           
+PAGES=$(pdfinfo $SET-cards.pdf | grep "Pages" | awk '{print $NF}')    ## Extract number of pages in cards file                                                                           
 REVERSE=$(( PAGES / 2 ))
 OUTPUT=pagelist.tex                                                   ## For building reshuffled page set
 NUM=0
