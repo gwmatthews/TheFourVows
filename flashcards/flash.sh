@@ -72,7 +72,7 @@ xelatex $SET.tex
 rm ./*.aux
 rm ./*.log
 rm ./*.out
-#rm $SET-cards*.tex
+rm $SET-cards*.tex
 #rm $SET-cards.pdf
 
 
