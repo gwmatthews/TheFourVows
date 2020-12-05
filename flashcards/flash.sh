@@ -1,10 +1,14 @@
 #!/bin/bash
 ###  generates Japanese flashcards from csv files produced by Wanikani Item Inspector
-###  EXAMPLE flash.sh vocab-20   (using file vocab-20.csv)
-SET=$1                                                                ## takes one argument filename of csv file minus the .csv
-BEGINFRONT=$(sed -n '1,4 p' < card-frame)                             ## LaTeX at beginning of front pages
-BEGINBACK=$(sed -n '5,8 p' < card-frame)                              ## LaTeX at beginning of back pages
-END=$(sed -n '9,11 p' < card-frame)                                   ## LaTeX at end of cards file
+###  EXAMPLE ./flash.sh vocab-20   (using file vocab-20.csv)
+### options -h: print help, -k: kanji only use larger font
+
+FONTSIZE="\renewcommand{\smallkanji}{\centering\fontsize{34}{34}}"
+
+SET=$1                                                               ## takes one argument filename of csv file minus the .csv
+BEGINFRONT=$(sed -n '1,3 p' < card-frame)                             ## LaTeX at beginning of front pages
+BEGINBACK=$(sed -n '4,7 p' < card-frame)                              ## LaTeX at beginning of back pages
+END=$(sed -n '8,10 p' < card-frame)                                   ## LaTeX at end of cards file
 #
 ## fill content into front of card: wrap comma separated fields in braces, add prefix, divide into sections, same for back
 #
@@ -13,8 +17,8 @@ BACK=$(cat $SET.csv | sed -e 's_Unavailable_{radical_'| sed -e 's/["]/{/' -e 's/
 #
 ## add front and back of card LaTeX wrappers
 #
-echo "$BEGINFRONT" "$FRONT" "$END" > $1-cards-front.tex
-echo "$BEGINBACK" "$BACK" "$END"  > $1-cards-back.tex
+echo "$FONTSIZE" "$BEGINFRONT" "$FRONT" "$END" > $1-cards-front.tex
+echo "$FONTSIZE" "$BEGINBACK" "$BACK" "$END"  > $1-cards-back.tex
 #
 ## duplicate the cards template
 #
@@ -68,8 +72,8 @@ xelatex $SET.tex
 rm ./*.aux
 rm ./*.log
 rm ./*.out
-rm $SET-cards*.tex
-rm $SET-cards.pdf
+#rm $SET-cards*.tex
+#rm $SET-cards.pdf
 
 
 
