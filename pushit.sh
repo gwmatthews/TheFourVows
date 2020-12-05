@@ -22,9 +22,9 @@ cp *.pdf ..
 cd ..
 cp -v *.pdf ../../github/gwmatthews.github.io.git/
 git add .
-git commit -m rebuild
+git commit -m "rebuild"
 git push
 cd ../../github/gwmatthews.github.io.git/
 git add .
-git commit -m rebuild
+git commit -m "rebuild"
 git push
