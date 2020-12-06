@@ -1,14 +1,24 @@
 #!/bin/bash
 ###  generates Japanese flashcards from csv files produced by Wanikani Item Inspector
-###  EXAMPLE ./flash.sh vocab-20   (using file vocab-20.csv)
-### options -h: print help, -k: kanji only use larger font
 
-FONTSIZE="\renewcommand{\smallkanji}{\centering\fontsize{34}{34}}"
+function usage {
 
-SET=$1                                                               ## takes one argument filename of csv file minus the .csv
-BEGINFRONT=$(sed -n '1,3 p' < card-frame)                             ## LaTeX at beginning of front pages
-BEGINBACK=$(sed -n '4,7 p' < card-frame)                              ## LaTeX at beginning of back pages
-END=$(sed -n '8,10 p' < card-frame)                                   ## LaTeX at end of cards file
+echo "$0 <filename> <optional fontsize in pts>" 
+
+}
+
+if [ $# -lt 1 ]; then
+	    usage
+	  	exit 1 # error
+	fi
+
+SET=$1                                                                ## takes one argument filename of csv file minus the .csv
+FSIZE=${2:-30}                                                        ## set default font size: can be changed in optional second parameter 55 is good for single kanji
+FONTSIZE="\renewcommand{\smallkanji}{\centering\fontsize{$FSIZE}{$FSIZE}}"
+                       
+BEGINFRONT=$(sed -n '2,4 p' < card-frame)                             ## LaTeX at beginning of front pages
+BEGINBACK=$(sed -n '5,8 p' < card-frame)                              ## LaTeX at beginning of back pages
+END=$(sed -n '9,11 p' < card-frame)                                   ## LaTeX at end of cards file
 #
 ## fill content into front of card: wrap comma separated fields in braces, add prefix, divide into sections, same for back
 #
@@ -17,12 +27,12 @@ BACK=$(cat $SET.csv | sed -e 's_Unavailable_{radical_'| sed -e 's/["]/{/' -e 's/
 #
 ## add front and back of card LaTeX wrappers
 #
-echo "$FONTSIZE" "$BEGINFRONT" "$FRONT" "$END" > $1-cards-front.tex
-echo "$FONTSIZE" "$BEGINBACK" "$BACK" "$END"  > $1-cards-back.tex
+echo "$FONTSIZE" $'\n' "$BEGINFRONT" "$FRONT" "$END" > $1-cards-front.tex
+echo "$FONTSIZE" $'\n' "$BEGINBACK" "$BACK" "$END"  > $1-cards-back.tex
 #
 ## duplicate the cards template
 #
-cp cards.tex $1-cards.tex
+cp cards $1-cards.tex
 #
 ## create temp pdf sheets to be reshuffled and rebuilt in code that follows
 #
@@ -39,7 +49,7 @@ NUM=0
 #
 ## copy the template
 #
-cp remix.tex $SET.tex                                                 
+cp remix $SET.tex                                                 
 #
 ## construct the pagelist array
 #
@@ -53,6 +63,7 @@ done
 #
 ##### format for pdfpages
 #
+
 PAGELIST=$(echo ${arr[@]} | sed 's/\s/, /g')                          
 #
 ## assemble full line of LaTeX code
@@ -65,15 +76,13 @@ echo $REORDERED > $OUTPUT
 #
 ## compile reordered flashcard pages
 #
-xelatex $SET.tex                                                     
+xelatex $SET                                                     
 #
 ## clean up the mess
 #
 rm ./*.aux
 rm ./*.log
 rm ./*.out
-rm $SET-cards*.tex
+rm *.tex
 #rm $SET-cards.pdf
-
-
 
