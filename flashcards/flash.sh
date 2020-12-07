@@ -1,6 +1,7 @@
 #!/bin/bash
 ###  generates Japanese flashcards from csv files produced by Wanikani Item Inspector
-
+###  building cards requires sutras.sty LaTeX package
+#
 function usage {
 
 echo "$0 <filename> <optional fontsize in pts>" 
@@ -10,15 +11,22 @@ echo "$0 <filename> <optional fontsize in pts>"
 if [ $# -lt 1 ]; then
 	    usage
 	  	exit 1 # error
-	fi
-
-SET=$1                                                                ## takes one argument filename of csv file minus the .csv
-FSIZE=${2:-30}                                                        ## set default font size: can be changed in optional second parameter 55 is good for single kanji
+fi
+#
+## takes one argument filename of csv file with or without .csv extension
+FILENAME=$1
+#
+## set default font size: can be changed with optional second parameter 30 is good for longer vocab, 55 is good for single kanji
+#
+FSIZE=${2:-30}                                                             
 FONTSIZE="\renewcommand{\smallkanji}{\centering\fontsize{$FSIZE}{$FSIZE}}"
-                       
-BEGINFRONT=$(sed -n '2,4 p' < card-frame)                             ## LaTeX at beginning of front pages
-BEGINBACK=$(sed -n '5,8 p' < card-frame)                              ## LaTeX at beginning of back pages
-END=$(sed -n '9,11 p' < card-frame)                                   ## LaTeX at end of cards file
+SET="${FILENAME%.[^.]*}" 
+#
+## get LaTeX wrappers from card-frame file
+#                 
+BEGINFRONT=$(sed -n '2,4 p' < card-frame)
+BEGINBACK=$(sed -n '5,8 p' < card-frame)
+END=$(sed -n '9,11 p' < card-frame)
 #
 ## fill content into front of card: wrap comma separated fields in braces, add prefix, divide into sections, same for back
 #
@@ -27,16 +35,16 @@ BACK=$(cat $SET.csv | sed -e 's_Unavailable_{radical_'| sed -e 's/["]/{/' -e 's/
 #
 ## add front and back of card LaTeX wrappers
 #
-echo "$FONTSIZE" $'\n' "$BEGINFRONT" "$FRONT" "$END" > $1-cards-front.tex
-echo "$FONTSIZE" $'\n' "$BEGINBACK" "$BACK" "$END"  > $1-cards-back.tex
+echo "$FONTSIZE" $'\n' "$BEGINFRONT" "$FRONT" "$END" > $SET-cards-front.tex
+echo "$FONTSIZE" $'\n' "$BEGINBACK" "$BACK" "$END"  > $SET-cards-back.tex
 #
 ## duplicate the cards template
 #
-cp cards $1-cards.tex
+cp cards $SET-cards.tex
 #
 ## create temp pdf sheets to be reshuffled and rebuilt in code that follows
 #
-xelatex $1-cards.tex
+xelatex $SET-cards.tex
 #
 ## reshuffle pages for two sided printing
 #
@@ -63,7 +71,6 @@ done
 #
 ##### format for pdfpages
 #
-
 PAGELIST=$(echo ${arr[@]} | sed 's/\s/, /g')                          
 #
 ## assemble full line of LaTeX code
@@ -84,5 +91,6 @@ rm ./*.aux
 rm ./*.log
 rm ./*.out
 rm *.tex
-#rm $SET-cards.pdf
+rm *-cards.pdf
+
 

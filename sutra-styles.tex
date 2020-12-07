@@ -38,7 +38,7 @@
 	    	
 	    	\begin{itemize}
 	    		\item[{\fontsize{20}{20}{法}}] What is this anyway?
-	    		\item[] First, it is a collection of printable versions of Japanese zen sutras for tracing, chanting, learning or display in a variety of styles and fonts. See next page for examples.
+	    		\item[] First, it is a collection of printable versions of Japanese zen sutras for tracing, chanting, learning or display in a variety of styles and fonts. 
 	    	\end{itemize}
 	    	
 	    	\begin{itemize}
@@ -138,11 +138,11 @@
 $#> cp yourFile.csv flashcards/
 $#> cd flashcards
 $#> chmod +x flash.sh      # if needed
-$#> ./flash.sh yourFile    # no .csv extension!
+$#> ./flash.sh yourFile.csv
 
 \end{verbatim}
 
-What this script does is reformat the csv file, split it into sections that fit on a page, and combine these with the page templates \verb|cards.tex| and \verb|card-frame| to produce front and back pages in pdf format. It then assembles a pdf file for printing.	
+What this script does is reformat the csv file, split it into sections that fit on a page, and combine these with the \LaTeX templates \verb|cards| and \verb|card-frame| to produce sets of front and back pages in pdf format. It then rearranges to pages for printing.	
 	
 	
 	\vfill\eject\pagebreak

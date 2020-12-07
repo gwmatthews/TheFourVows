@@ -1,4 +1,4 @@
-%    sutras for tracing, reading, chanting
+%  template for flashcards produced with sutras.sty
 
 \documentclass[letterpaper, onesided]{article}
 \usepackage[margin=3mm]{geometry}
