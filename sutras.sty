@@ -34,15 +34,10 @@
 %%% For ending verses
 \newcommand{\coda}{	\vspace*{1ex}\heartflow{。}\vspace*{1ex}}
 
-%%% To rotate 一
-%\newcommand{\stick}{\scalebox{-1}[1]{\rotatebox[origin=lb]{90}{ー}}\hspace*{1em}}
+%%% Colors for fonts
 
 \newcommand{\tracing}{\tcbset{colupper=black!30}}
 \newcommand{\inked}{\tcbset{colupper=black!75}}
-
-%%% For styling flashcards
-
-\newcommand{\flashset}{\tcbset{enhanced, segmentation hidden, frame hidden, borderline south={0.5pt}{-6.5pt}{black}, borderline north={0.5pt}{0pt}{black}}}
 
 %% for credits page
 
@@ -140,30 +135,7 @@
 }
 %%%%%%%%%%%%%%%%
 
-%%% display reading, kanji and meaning
-\newcommand{\flashFront}[3]
-{
-	\flashset
-	\begin{flashbox}[coltitle=white, collower=white, colbacktitle= white]{#1}
-		\smallkanji #2
-		\means #3
-	\end{flashbox}
-}
-%%%%%%%%%%%%%%%%
-
-%%% display kanji and reading
-\newcommand{\flashBack}[3]
-{
-	\flashset
-	\begin{flashbox}[coltitle=black, collower=black, colupper=white]{#1}
-		\smallkanji #2
-		\means #3
-	\end{flashbox}
-}
-%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%
-% VARIABLE HEIGHT BLOCK FOR JUST KANJI
+% Variable height block for just kanji
 % #1: tcolorbox options
 
 \newtcolorbox{kanjiflow}[1][]

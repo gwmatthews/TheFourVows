@@ -93,63 +93,11 @@
 		
 	\end{itemize}
 	\vfill\eject\pagebreak
-	
-	
-	
-	{\LARGE Flashcards}
+
 	
 	\vspace*{2cm}
 	
-	The flashcards/ subdirectory contains a linux bash script that automates the production of flashcards from csv data files. The data file format, which is the result of the wanikani Item Inspector script settings listed below looks like so:
-	
-	\begin{verbatim}
-	
-	"とう",刀,"Sword"
-	"りょう",了,"Finish"
-	"しょう",少,"Few"
-	
-	\end{verbatim}
-	
-	
-	\begin{itemize}
-		\item[] \LaTeX requirements: multicols, tcolorbox, xeCJK, anyfontsize, nopagno, xelatex, pdfpages, pdfinfo
-		\item[] Wanikani item inspector settings:
-		\begin{itemize}
-			\item[] filter: kanji and vocabulary only
-			\item[] columns: Reading Brief, Item, Meaning Brief
-			\item[] cell separator => comma, use of quotes => only when needed
-		\end{itemize}
-		\item[] examples
-			\begin{itemize}
-            \item[] \href{https://gwmatthews.github.io/vocab-9.pdf}{Level 9 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-10.pdf}{Level 10 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-11.pdf}{Level 11 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-12.pdf}{Level 12 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/vocab-13.pdf}{Level 13 Vocabulary}
-\item[] \href{https://gwmatthews.github.io/leeches.pdf}{my leeches}
-
-			\end{itemize}
-	\end{itemize}
-
-
-
-
-\begin{verbatim}
-$#> cp yourFile.csv flashcards/
-$#> cd flashcards
-$#> chmod +x flash.sh      # if needed
-$#> ./flash.sh yourFile.csv
-
-\end{verbatim}
-
-What this script does is reformat the csv file, split it into sections that fit on a page, and combine these with the \LaTeX templates \verb|cards| and \verb|card-frame| to produce sets of front and back pages in pdf format. It then rearranges to pages for printing.	
-	
-	
-	\vfill\eject\pagebreak
-	
-	\vspace*{2cm}
-	
-	{\LARGE Examples}
+	{\LARGE Examples using different fonts}
 	
 	\vspace*{1cm}
 	

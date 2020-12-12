@@ -1,16 +1,12 @@
 ### some commands that I have found useful in this project
 
-
-# to turn string of text into comma separated text
+# to turn string of text into comma separated text to put each kanji in its own block
 gawk '{$1=$1}1' FPAT='.{1}' OFS=, input.file  
-
 
 # to compile all .tex to .pdf
 for i in 'the-four-vows*.tex'; do xelatex -synctex=1 -interaction=nonstopmode $i; done    
 
-
 # to combine text files line by line
-
 paste file-1 file-2 > file-3
 
 
